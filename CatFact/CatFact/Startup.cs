@@ -1,4 +1,5 @@
 using CatFact.Data;
+using CatFact.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -25,7 +26,8 @@ namespace CatFact
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            services.AddScoped<ICatFactReader, CatFactReader>();
+            services.AddScoped<ICatFactReader, CatFactReader>(); 
+            services.AddScoped<IFactWriter, FactWriter>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
