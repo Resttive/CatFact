@@ -1,0 +1,24 @@
+﻿@model CatFact.Models.FactCat
+@{
+    ViewData["Title"] = "Fact Page";
+}
+
+<h1>Cat fact</h1>
+
+<div style="float:left; width:500px">
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-4">
+            Fact
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.Fact)
+        </dd>
+        <dt class="col-sm-4">
+            Length
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.Length)
+        </dd>
+    </dl>
+</div>
