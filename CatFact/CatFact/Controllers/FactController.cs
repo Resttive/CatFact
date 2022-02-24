@@ -16,5 +16,11 @@ namespace CatFact.Controllers
             FactCat fact = _dataReader.GetFact();
             return View(fact);
         }
+
+        public IActionResult NewFact()
+        {
+            FactCat fact = _dataReader.GetFact();
+            return View("Index", fact);
+        }
     }
 }
